@@ -1,6 +1,6 @@
 const inputNumber=document.getElementById("input-number");
 
-const inputName=document.getElementById("inpute-name");
+const inputName=document.getElementById("input-name");
 
 const inputMonth=document.getElementById("input-month");
 
@@ -25,7 +25,7 @@ const form=document.querySelector("form");
 const done = document.querySelector(".thank-you");
 
 function setCardNumber(e){
-    cardNumber.innerText = format(e.target.value);
+    cardNumber.innerText = formatNumber(e.target.value);
 }
 
 function setCardName(e){
@@ -45,15 +45,21 @@ function setCardCvc(e){
 }
 
 function format(s){
-    return s.toString().replace(/\d{4}(?=.)/g,"$&");
+    return s.toString().replace(/\d(?=.)/g,"$&");
 }
+function formatNumber(s){
+    return s.toString().replace(/\d{4}(?=.)/g,"$& ");
+}
+
 
 function handleSubmit(e){
     e.preventDefault();
+
     if(!inputName.value){
         inputName.classList.add("error");
         inputName.parentElement.classList.add("error-message");
     }
+
     else{
         inputName.classList.remove("error");
         inputName.parentElement.classList.remove("error-message");

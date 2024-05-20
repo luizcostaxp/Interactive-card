@@ -33,6 +33,7 @@ box{
 .container{
     display:flex;
     align-items:center;
+    
 }
 
 .cards-section{
@@ -60,7 +61,7 @@ box{
 .front-card{
     position:relative;
     transform: translateX(-100px);
-    
+
 }
 
 .card-logo{
@@ -234,7 +235,7 @@ input:focus{
 
 .thank-you button{
     font-size:18px;
-    background-color: var(--Very-dark-violet);
+    background-color: hsl(278, 68%, 11%);
     color: var(--White);
     height: 50px;
     width:100%;
@@ -242,65 +243,26 @@ input:focus{
     cursor:pointer;
 }
 
-@media screen and(max-width: 1023px){
-    .font-card .card-container img, .front-card, back-card img, .back-card{
+@media screen and (max-width: 1023px){
+    .front-card .card-container img, .front-card img, .back-card img, back-card{
         width:300px;
     }
 
-    .form-section{
+    .form-section
+    {
         width:65%;
     }
 
-    .card-logo{
-        width:50px;
+    .card-logo {
+        display:none;
     }
 
     #number{
-        font-size:1rem;
+        font-size: 1rem;
     }
 
     #cvc{
-        top: 42%;
+        top:42%;
         right:12%
-    }
-}
-
-@media screen and (max-width: 757px){
-    .font-card .card-container img, .front-card, back-card img, .back-card{
-        width:260px;
-    }
-
-    .container{
-        flex-direction:column;
-    }
-
-    .cards-section{
-        width:100%;
-        min-height:30vh;
-        background-image: url(./images/bg-main-mobile.png);
-    }
-
-    .cards{
-        flex-direction: column-reverse;
-        left:61.5%;
-        top:60%;
-        gap:0;
-    }
-        
-    .back-card{
-        transform: translate(60px);
-    }
-
-    .front-card{
-        z-index: 1000;
-    }
-
-    #number{
-        bottom:3.5rem;
-
-    }
-
-    .form-section{
-        margin-top: 5rem;
-    }
+    }    
 }
