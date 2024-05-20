@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 :root{
     --White: hsl(0, 0%, 100%);
@@ -8,15 +8,22 @@
     --Red: hsl(0, 100%, 66%);
 }   
 
-*,*::before, *::after{
-    padding:0;
+
+*{
+    box-sizing:border-box;
     margin:0;
-    box-sizing: border-box;
+    padding:0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+
 }
 
 box{
-    min-height: 100wh;
-    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
 }
 
 .hidden{
@@ -35,6 +42,7 @@ box{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    position:relative;
 }
 
 .cards{
@@ -45,32 +53,37 @@ box{
     left:90%;
     top:50%;
     transform:translate(-50%,-50%);
+    
+    
 }
 
 .front-card{
     position:relative;
     transform: translateX(-100px);
+    
 }
 
 .card-logo{
     position:absolute;
-    left:1rem;
+    left:2rem;
     top:1rem;
 }
 
 #number{
     color: var(--White);
-    letter-spacing: 2px;
-    position: absolut;
+    letter-spacing:2px;
+    position: absolute;
     bottom:5rem;
-    left:1rem;
+    left:2rem;
+    font-size:25px;
 }
 
 .card-info{
     color: var(--White);
     position: absolute;
-    left: 1rem;
-    right:1rem;
+    letter-spacing:1.5px;
+    left: 2rem;
+    right:2rem;
     bottom:2rem;
     display:flex;
     justify-content: space-between;
@@ -106,20 +119,42 @@ box{
     flex-direction:column;
 }
 
+label[for="input-name"] {
+    color:hsl(278, 68%, 11%);
+    letter-spacing:2px;
+    font-size:12px;    
+  }
+
 .block-2{
     display:flex;
     flex-direction:column;
 }
 
+label[for="input-number"] {
+    color:hsl(278, 68%, 11%);
+    letter-spacing:2px;
+    font-size:12px;
+  }
+
 .block-3{
     display:flex;
     gap:1rem;
 }
+label[for="input-cvc"] {
+    color:hsl(278, 68%, 11%);
+    letter-spacing:2px;
+    font-size:12px;
+  }
 
 .date-block{
     display:flex;
     flex-direction: column;
 }
+label[for="date-block"] {
+    color:hsl(278, 68%, 11%);
+    letter-spacing:2px;
+    font-size:12px;
+  }
 
 .date-block .two-boxes-input{
     display:flex;
@@ -137,16 +172,21 @@ box{
 }
 
 #input-cvc{
-    width:100%;
+    width:168px;
+}
+
+#name{
+    text-transform:uppercase;
 }
 
 form button{
     font-size:18px;
-    background-color: var(--Very-dark-violet);
+    background-color: hsl(278, 68%, 11%);
     color: var(--White);
     height: 50px;
     border-radius:6px;
     cursor:pointer;
+    width:335px;
 }
 
 label{
@@ -157,14 +197,16 @@ label{
 
 input{
     padding:0.5rem;
-    font-size:10px;
-    border: 1px solid var(--Dark-grayish-violet);
+    font-size:14px;
+    border: 1px solid ;
     border-radius:6px;
+    width:210%;
+    border-color:hsl(270, 3%, 87%)
 }
 
 input::placeholder{
     font-family: inherit;
-    color: var(--Dark-grayish-violet);
+    color: hsl(279, 6%, 55%)
 }
 
 input:focus{
